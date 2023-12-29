@@ -34,10 +34,6 @@ public class HealthController : MonoBehaviour
                 GameObject.FindGameObjectWithTag("MainCamera").GetComponent<SoundManager>().EnemyDieSound();
             }
             script.SendMessage("Die");
-
-            if (healthBar != null) {
-                ScoreCounter.instance.AddScore(10);
-            }
         }
         if (slider != null) {
             slider.value = Mathf.Lerp(slider.value, health, Time.deltaTime*4);
